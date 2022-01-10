@@ -1,0 +1,51 @@
+<div class="background-image" [ngStyle]="{'background-image': 'url('+ photo + ')'}" >
+    <form [formGroup]='entryForm' (ngSubmit)="onSubmit(entryForm.value)">
+    <div class="container">
+        <div class="row">
+                <div class="col">
+                    <mat-label>From</mat-label>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Enter pick-up" id="pick"
+                        formControlName="pick" minlength="3" maxlength="20">
+                      </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-label>To</mat-label>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Enter drop" id="dest" 
+                        formControlName="dest" minlength="3" maxlength="20">
+                      </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-label>Departure</mat-label>
+                    <mat-form-field>
+                        <input matInput type="datetime-local" placeholder="Departure" id="depart"
+                        formControlName="dep" minlength="3" maxlength="20">
+                      </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-label>Return</mat-label>
+                    <mat-form-field>
+                        <input matInput type="datetime-local" placeholder="Return" id="return"
+                        formControlName="ret" minlength="3" maxlength="20">
+                      </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-label>Traveller|Class</mat-label>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="passengers,class" id="class"
+                        formControlName="claps" minlength="3" maxlength="20">
+                      </mat-form-field>
+                </div>
+                <div class="col">
+                    <button class="btn search" type="submit" [disabled]="entryForm.invalid">Search</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <img src="../../../assets/MicrosoftTeams-image (2).png" width="80%" height="100px" style="margin-left: 10%; z-index: 100; position: absolute; margin-top: -3%;">
+</div>
+
+

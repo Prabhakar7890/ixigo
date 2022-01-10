@@ -1,0 +1,24 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .logo{
+      background-color: #ec5b24;
+      width: 50px;
+      height: 25px;
+      color: white;
+      border-radius: 2%;
+      text-align: center;
+  }
+  mat-toolbar{
+      background-color: whitesmoke;
+      font-size: 14px;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      z-index:999;
+  }
+  .icons{
+      margin: 10px;
+  }
+ 
