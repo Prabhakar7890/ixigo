@@ -42,6 +42,7 @@ import {MatTreeModule} from '@angular/material/tree';
   declarations: [],
   imports: [
     CommonModule,
+    MatAutocompleteModule,
     MatFormFieldModule,
     MatButtonModule,
     MatBadgeModule,
@@ -81,6 +82,7 @@ import {MatTreeModule} from '@angular/material/tree';
   ],
   exports: [
     MatFormFieldModule,
+    MatAutocompleteModule,
     MatButtonModule,
     MatBadgeModule,
     MatBottomSheetModule,

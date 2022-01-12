@@ -1,0 +1,94 @@
+{
+  "register": [
+    {
+      "firstname": "KATUKOJULA",
+      "lastname": "PRABHAKAR",
+      "email": "prabhakar.katukojula@techwave.net",
+      "password": "Hello@123",
+      "confirmPassword": "Hello@123",
+      "id": 1
+    },
+    {
+      "firstname": "lokesh",
+      "lastname": "sagi",
+      "email": "loki@dom.com",
+      "password": "Hello@123",
+      "confirmPassword": "Hello@123",
+      "id": 2
+    },
+    {
+      "firstname": "Charan",
+      "lastname": "Ram",
+      "email": "ramcharan@gmail.com",
+      "password": "Hello@123",
+      "confirmPassword": "Hello@123",
+      "id": 3
+    },
+    {
+      "firstname": "AdiNarayana",
+      "lastname": "Sangu",
+      "email": "adi@gooba.gubelu",
+      "password": "Hello@123",
+      "confirmPassword": "Hello@123",
+      "id": 4
+    }
+  ],
+  "buses": [
+    {
+      "reststops": 1,
+      "start": "23:15",
+      "eta": "08:15",
+      "totaltime": "9h 00m",
+      "travels": "KSM Road Lines",
+      "bustype": "Volvo Multi Axle Sleeper B11R(2+1)",
+      "seatsleft": 21,
+      "pricing": 1609,
+      "rating": 4.7,
+      "noofreviews": 768,
+      "pickup": "hyderabad",
+      "dest": "Banglore"
+    },
+    {
+      "reststops": 4,
+      "start": "22:15",
+      "eta": "07:15",
+      "totaltime": "9h 00m",
+      "travels": "Intercity travels",
+      "bustype": "Volvo Multi Axle Sleeper B11R(2+1)",
+      "seatsleft": 21,
+      "pricing": 1609,
+      "rating": 4.7,
+      "noofreviews": 768,
+      "pickup": "hyderabad",
+      "dest": "Banglore"
+    },
+    {
+      "reststops": 1,
+      "start": "23:15",
+      "eta": "08:15",
+      "totaltime": "9h 00m",
+      "travels": "Intercity travels",
+      "bustype": "Bharat Benz A/C Sleeper(2+1)",
+      "seatsleft": 10,
+      "pricing": 1400,
+      "rating": 4.5,
+      "noofreviews": 502,
+      "pickup": "hyderabad",
+      "dest": "Goa"
+    },
+    {
+      "reststops": 0,
+      "start": "23:10",
+      "eta": "10:30",
+      "totaltime": "11h 20m",
+      "travels": "Intercity smartbus",
+      "bustype": "A/C Sleeper(2+1)",
+      "seatsleft": 13,
+      "pricing": 1450,
+      "rating": 4.1,
+      "noofreviews": 328,
+      "pickup": "hyderabad",
+      "dest": "Chennai"
+    }
+  ]
+}

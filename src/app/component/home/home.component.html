@@ -6,14 +6,25 @@
                     <mat-label>From</mat-label>
                     <mat-form-field>
                         <input matInput type="text" placeholder="Enter pick-up" id="pick"
-                        formControlName="pick" minlength="3" maxlength="20">
+                         minlength="3" maxlength="20" [formControl]="pick"
+                        [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredpicks | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
                       </mat-form-field>
                 </div>
                 <div class="col">
                     <mat-label>To</mat-label>
                     <mat-form-field>
                         <input matInput type="text" placeholder="Enter drop" id="dest" 
-                        formControlName="dest" minlength="3" maxlength="20">
+                        [formControl]="pick" minlength="3" maxlength="20" [matAutocomplete]="auto1">
+                        <mat-autocomplete #auto1="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredpicks | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
                       </mat-form-field>
                 </div>
                 <div class="col">
@@ -47,5 +58,22 @@
 <div>
     <img src="../../../assets/MicrosoftTeams-image (2).png" width="80%" height="100px" style="margin-left: 10%; z-index: 100; position: absolute; margin-top: -3%;">
 </div>
+
+<!-- <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Number</mat-label>
+      <input type="text"
+             placeholder="Pick one"
+             aria-label="Number"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form> -->
 
 

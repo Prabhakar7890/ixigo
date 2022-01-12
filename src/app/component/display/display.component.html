@@ -1,0 +1,34 @@
+<div *ngFor="let bus of singleRest">
+    <div class="card">
+        <div class="row">
+            <div class="col">
+                <h2>{{bus.travels}}</h2>
+                <p>{{bus.bustype}}</p>
+                <p></p>
+                <p></p>
+                <p>{{bus.reststops}} REST STOPS</p>
+            </div>
+            <!-- <div class="col-lg-2"></div> -->
+            <div class="col-1">
+                <h2>{{bus.start}}</h2>
+            </div>
+            <div class="col-1">
+                <h4>{{bus.totaltime}}</h4>
+            </div>
+            <div class="col-1">
+                <h2>{{bus.eta}}</h2>
+            </div>
+            <div class="col-1">
+                <h2>{{bus.rating}}</h2>
+                <p>{{bus.noofreviews}}</p>
+            </div>
+            <div class="col-1">
+                <h2>₹{{bus.pricing}}</h2>
+            </div>
+            <div class="col-1">
+                <h2></h2>
+                <p>{{bus.seatsleft}} seats left</p>
+            </div>
+        </div>
+    </div>
+</div>

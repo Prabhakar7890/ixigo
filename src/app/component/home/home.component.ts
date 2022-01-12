@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +19,13 @@ export class HomeComponent implements OnInit {
   ]
   changeBackgroundCounter: number = 0;
   entryForm: FormGroup;
-  constructor(public fb: FormBuilder) {
+  
+ 
+  options: string[] = ['One', 'Two', 'Three'];
+  filteredpicks: Observable<string[]> | any;
+  filtereddrops: Observable<string[]> | any;
+
+  constructor(public fb: FormBuilder, private router:Router) {
     this.entryForm = fb.group({
       pick: ["", [Validators.required]],
       dest: ["", [Validators.required]],
@@ -26,6 +35,9 @@ export class HomeComponent implements OnInit {
   }
   photo = "";
   submitted = false;
+  pick:string="";
+  dest:string="";
+
   ngOnInit(): void {
     this.photo = this.images[0];
     setInterval(() => {
@@ -37,12 +49,30 @@ export class HomeComponent implements OnInit {
       this.photo = this.images[this.changeBackgroundCounter];
 
     }, 5000);
+
+    this.filteredpicks = this.pick.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value)),
+    );
+    this.filtereddrops = this.pick.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value)),
+    );
   }
+ 
+  get f() { return this.entryForm.controls; }
+
   onSubmit(value: any) {
     console.log(value)
   }
-  get f() { return this.entryForm.controls; }
+  
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
 
-
+  onSearch(){
+    this.router.navigate([`buses/${this.pick}/${this.dest}`])
+  }
 
 }
